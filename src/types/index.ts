@@ -11,7 +11,7 @@ export interface ITeam {
   place: number
 }
 
-export type StatusType = "Ongoing" | "Finished" | "Scheduled"
+export type StatusType = 'Ongoing' | 'Finished' | 'Scheduled'
 
 export interface IMatch {
   awayScore: number

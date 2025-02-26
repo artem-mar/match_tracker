@@ -1,12 +1,12 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @font-face {
-  font-family: "Tactic";
+  font-family: 'Tactic';
   src: url(/tactic-sans-bold.ttf);
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: 'Inter';
   src: url(/Inter-VariableFont.ttf);
 }
 

@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react"
-import Button from "../components/Button"
-import AlertTriangle from "../icons/AlertTriangle"
-import Refresh from "../icons/Refresh"
-import { getMatches } from "../api/matches"
-import { IMatch } from "../types"
-import MatchCard from "../components/MatchCard"
+import { useEffect, useState } from 'react'
+import Button from '../components/Button'
+import AlertTriangle from '../icons/AlertTriangle'
+import Refresh from '../icons/Refresh'
+import { getMatches } from '../api/matches'
+import { IMatch } from '../types'
+import MatchCard from '../components/MatchCard'
 
 const MainPage = () => {
   const [isError, setError] = useState(false)
@@ -32,14 +32,16 @@ const MainPage = () => {
   }, [])
 
   return (
-    <div className='p-11 w-screen h-screen bg-background flex flex-col gap-5 overflow-y-auto'>
-      <div className='w-full flex justify-between items-center'>
-        <h1 className='text-text-primary italic font-[Tactic] text-[32px]'>Match tracker</h1>
+    <div className='bg-background flex h-screen w-screen flex-col gap-5 overflow-y-auto p-11'>
+      <div className='flex w-full items-center justify-between'>
+        <h1 className='text-text-primary font-[Tactic] text-[32px] italic'>
+          Match tracker
+        </h1>
         <div className='flex gap-3'>
           {isError && (
-            <div className='flex items-center gap-2.5 px-6 rounded-sm bg-bg-card text-text-primary'>
+            <div className='bg-bg-card text-text-primary flex items-center gap-2.5 rounded-sm px-6'>
               <AlertTriangle />
-              <span className='font-[Inter] font-medium text-lg'>
+              <span className='font-[Inter] text-lg font-medium'>
                 Ошибка: не удалось загрузить информацию
               </span>
             </div>
@@ -51,13 +53,13 @@ const MainPage = () => {
             }}
           >
             Обновить
-            <Refresh className={isFetching ? "animate-spin" : ""} />
+            <Refresh className={isFetching ? 'animate-spin' : ''} />
           </Button>
         </div>
       </div>
 
-      <section className='flex-grow flex flex-col gap-3 overflow-y'>
-        {matches.map((m) => (
+      <section className='overflow-y flex flex-grow flex-col gap-3'>
+        {matches.map(m => (
           <MatchCard key={m.title} match={m} />
         ))}
       </section>

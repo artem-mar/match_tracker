@@ -1,5 +1,5 @@
-import { api } from "."
-import { IMatch } from "../types"
+import { api } from '.'
+import { IMatch } from '../types'
 
 interface IResponse {
   data: { matches: IMatch[] }
@@ -8,7 +8,7 @@ interface IResponse {
 
 export const getMatches = async (): Promise<IResponse> => {
   try {
-    const { data } = await api.get("/fronttemp")
+    const { data } = await api.get('/fronttemp')
     return data
   } catch (error) {
     console.error(error)

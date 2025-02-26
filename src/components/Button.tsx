@@ -5,7 +5,7 @@ interface IProps extends React.PropsWithChildren {
 const Button = ({ props, children }: IProps) => {
   return (
     <button
-      className='h-14 px-10 flex justify-between items-center gap-2.5 rounded-sm bg-red-1 active:bg-red-2 disabled:bg-red-3 disabled:text-text-disabled text-text-primary font-[Inter] font-semibold text-lg'
+      className='bg-red-1 active:bg-red-2 disabled:bg-red-3 disabled:text-text-disabled text-text-primary flex h-14 items-center justify-between gap-2.5 rounded-sm px-10 font-[Inter] text-lg font-semibold'
       {...props}
     >
       {children}

@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Tactic";
+  src: url(/tactic-sans-bold.ttf);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(/Inter-VariableFont.ttf);
+}
+
+@theme {
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #fafafa66;
+  --color-text-disabled: #787878;
+
+  --color-background: #06080c;
+  --color-foreground: #0b0e12;
+  --color-bg-card: #101318;
+
+  --color-green: #43ad28;
+  --color-red-1: #eb0237;
+  --color-red-2: #a01131;
+  --color-red-3: #701328;
+  --color-yellow: #eb6402;
+}
